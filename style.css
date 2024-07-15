@@ -1,0 +1,657 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.topBox{
+    height: 100vh;
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contant{
+    height: 500px;
+    width: 40%;
+    align-content: center;
+    margin: 0 40px;
+}
+.contant h3{
+    color: #FF3147;
+    font: normal normal 600 24px/78px ;
+    text-transform: uppercase;
+}
+.contant h1{
+    color: #000000;
+    text-transform: uppercase;
+    font: normal normal bold 32px / 32px  ;
+    text-align: left;
+}
+.contant p{
+    color: #000000;
+    text-align: left;
+    width: 80%;
+    font: normal normal normal 12px / 22px Poppins;
+    padding: 20px 0;
+        
+}
+.contant button{
+    width: 100px;
+    height: 38px;
+    font-size: 11px;
+    background: #FF3147 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    opacity: 1;
+    border:none;
+    letter-spacing: 1.4px;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: all 0.2s linear;
+    
+}
+.contant button:hover{
+    background-color:#FFFFFF;
+    color: #FF3147;
+    border: 1px solid #FF3147;
+    border-radius: 5px;
+}
+.topBox img{
+    width: 350px;
+    height: 500px;
+    opacity: 1;
+}
+.popUp{
+    width: 450px;
+    height: max-content;
+    position: absolute;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.errorName{
+    color: red;
+}
+.show{
+opacity: 1;
+}
+form{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+form h6{
+    letter-spacing: 0.4px;
+    color: #2D3142;
+    font-size: 20px;
+    font-weight: bold;
+}
+.inputBox {
+      height: 40px;
+      width: 100%;
+      border-bottom: 1px solid #6F718F99;
+      margin: 20px 0px;
+      position: relative;
+
+}
+.inputBox input{
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px;
+    text-align: left;
+    letter-spacing: 0.4px;
+    color: #2D3142;
+    font-weight: 500;
+   
+}
+.inputBox label{
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    padding: 0;
+    pointer-events: none;
+    color: #6F718F99;
+    letter-spacing: 0.4px;
+    font-size: 15px;
+    transition: all 0.5s linear;
+}
+.inputBox input:focus + label,
+    .inputBox input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #333;
+      transform: none;
+    }
+    .inputBox input:focus + label span,
+    .inputBox input:not(:placeholder-shown) + label span{
+        display: none;
+
+    }    
+.inputName{
+    display: flex;
+    gap: 20px;
+}
+.condition{
+    display: flex;
+    align-items: start;
+    width: 100%;
+    height: max-content;
+
+}
+.condition p{
+    font-size: 15px;
+    color: #616678;
+    margin: 0%;
+}
+input[type="checkbox"] {
+    display: none;
+}
+
+.condition label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 5px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 3px;
+    border: 2px solid #FF3366;
+    font-family: "FontAwesome";
+  }
+  
+  .condition input[type="checkbox"]:checked+label::before {
+    content: "\f00c";
+    font-size: 10px;
+    text-align: center;
+    background-color: #FF3366;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+  }
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 25px;
+    position: relative;
+}
+
+label::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.button{
+    height: max-content;
+    width: 100%;
+    text-align: center;
+}
+.button button{
+    width: 80%;
+    height: 52px;
+    background: #FF3366 0% 0% no-repeat padding-box;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.services{
+    width: 100%;
+    height: max-content;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    padding: 10px;
+}
+.services p{
+    color: #FF3147;
+}
+.miniContant{
+    display: flex;
+    gap: 25px
+}
+.miniContant h3{
+    width: 31%;
+    font-weight: 700;
+
+}
+.miniContant p{
+    color: #000000;
+    font-size: 13px;
+    width: 50%;
+}
+.serviceContant{
+    width: 80%;
+    margin: 10% 20%;
+    margin-bottom: 70px;
+}
+.imgContainer{
+    overflow-x  :hidden ;
+    width: 100%;
+    height: 100%;
+
+}
+.imgContant{
+    display: flex;
+    height: max-content;
+    width: max-content;
+
+}
+.imgGroup{
+    height: 100%;
+    width: 11% !important;
+    position: relative;
+    cursor: pointer;
+    
+
+}
+.imgContant img{
+    width: 222px;
+    height: 305px;
+}
+
+.webDev{
+    background-color: #FF3147;
+    width: 222px;
+    height: 305px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    cursor:pointer;
+    transition: all 0.5s linear;
+    
+}
+.webDev:hover {
+    opacity: 1; 
+    
+
+}
+.webDev img{
+    height: 35px;
+    width: 35px;
+}
+.webDev p{
+    font-size: 10px;
+}
+.webDev p,.webDev h6{
+    color: #FFFFFF;
+    text-align: center;
+}
+.webDev a{
+    text-decoration: none;
+    height: 30px;
+    width: 60%;
+
+
+}
+.readBtn{
+    height: 100%;
+    width: 100%;
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 15px;
+    cursor: pointer;
+    
+}
+.readBtn p{
+    color: #FF3147;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 500;
+}
+.readBtn img{
+    width: 30px;
+}
+.chooseAs{
+    height:max-content ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.chooseAs p{
+    color: #FF3147;
+    text-transform: uppercase;
+}
+.chooseAs h4{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.maindMap{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+    height: max-content;
+}
+.map{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: max-content;
+    width: 25%;
+}
+.map img{
+    height: 40px;
+    width: 40px;
+}
+.map h6{
+    font-size: 10px;
+}
+.map p{
+    font-size: 10px;
+    color:#000000;
+}
+.bestChart{
+    height: max-content;
+    width:75%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.bestChart img{
+    width: 470px;
+    height: 367px;
+    transition: all 0.5s linear;
+}
+.bestContant{
+    display: flex;
+    flex-direction: column;
+    height: 367px;
+    width: 200px;
+    background-color: #F6F6F6;
+}
+.box h1{
+        font-size: 15px;
+        font-weight: 300;
+}
+.box p{
+    font-size: 11px;
+    color: #000000  ;
+}
+.box {
+    padding: 10px;
+     padding-bottom: 7px;
+     cursor: pointer;
+}
+.click{
+    background-color:  #FF3147;
+    color: #FFFFFF ;
+}
+.clickp{
+    color: #FFFFFF !important;
+
+}
+.box_2 p{
+    color: #FFFFFF;
+}
+.growth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA ;
+    width: 100%;
+    height: max-content;
+}
+.growth p{
+    text-transform: uppercase;
+}
+.growth h1{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+.growthcards{
+    width: 75%;
+    height: max-content;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+
+}
+.growthcard{
+    height: 200px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    cursor: pointer;
+}
+.growthcard:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.growthcard img{
+    height: 25px;
+    width: 25px;
+}
+.growthcard h1{
+    font-weight: 400;
+    font-size: 35px;
+}
+.growthcard p{
+    color: #000000;
+    font-size: 12px;
+    margin: 0;
+}
+.feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 30px;
+    padding-bottom:30px ;
+}
+.feedback p{
+    text-transform: uppercase;
+    color: #FF3147;
+    
+}
+.feedback h1{
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+}
+.feedbackContant{
+    width: 40%;
+    height: max-content;
+    position: relative;
+    padding: 25px 0;
+    
+}
+.feedbackContant p{
+    color: #000000;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+.feedbackContant img{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 7px;
+    left: -13px;
+}
+.feedbackContant h6{
+    color: #FF3147;
+    font-size: 12px;
+    font-weight: 700;
+}
+.feedbackContant span{
+    color: #808080;
+    font-weight: 300;
+    font-size: 12px;
+}
+footer{
+    background-color: #FF3147;
+    width: 100%;
+    height: max-content;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    height: 30px;
+}
+.swiper-pagination{
+    bottom: auto !important;
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 10px;
+    
+}
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+.swiper-pagination-bullet-active {
+    background-image: url('/assets/img/1.svg');
+    width: 15px;
+    height: 15px;
+  }
+
+@media(max-width:957px){
+    .bestChart{
+        flex-direction: column;
+        align-items: center;
+    }
+    .bestContant{
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+    }
+    .growthcard h1{
+        font-size: 31px;
+        text-align: center;
+    }
+    .growthcard p{
+        text-align: center;
+    }
+    .box_1 ,.box_2 ,.box_3 {
+        padding: 15px;
+         padding-bottom: 7px;
+    }
+
+}
+@media(max-width:768px){
+
+    .topBox{
+        flex-direction: column-reverse;
+        height: max-content;
+
+    }
+    .contant{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .contant h1{
+        width: 100%;
+        font-size: 26px;
+        text-align: center;
+        padding: 10px;
+    }
+    .contant p{
+        width: 100%;
+        padding: 20px 20px;
+        text-align: center;
+    }
+    .topBox img{
+        height: 454px;
+        width: 320px;
+    }
+    .bestChart img{
+        height: 267px;
+        width: 300px;
+    }
+    .maindMap{
+        flex-direction: column;
+        align-items: center; 
+    }
+    .map{
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+    }
+    .map p{
+        text-align: center;
+    }
+    .growthcards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .growthcard{
+        width: 100%;
+    }
+    .feedbackContant{
+        width: 75%;
+    }
+
+}
+@media(max-width:670px){
+    footer{
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+@media(max-width:480px){
+    
+        .popUp{
+            width: 300px;
+        }
+        .miniContant{
+            flex-direction: column;
+            text-align: center;
+        }
+        .miniContant h3{
+            width: 90%;
+        
+        }
+        .miniContant p{
+            width: 90%;
+        }
+        .feedback h1{
+            font-size: 20px;
+            text-align: center;
+        }
+        .feedback p{
+            font-size: 12px;
+        }
+        .feedbackContant p{
+            text-align: center;
+        }
+        .feedbackContant img{
+            left: 9px;
+        }
+        
+
+       
+}
