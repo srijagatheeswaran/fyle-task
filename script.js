@@ -1,11 +1,23 @@
 
 let popUp = document.getElementById('popUp')
+let button = document.getElementById('showPopUpButton'); 
 
+button.addEventListener('click', function(event) {
+  event.stopPropagation(); 
+  showPopUp();
+});
 function showPopUp(){
-    popUp.classList.add('show')   
-    
-}
+  popUp.classList.add('show')   
 
+}
+function hidePopUp() {
+  popUp.classList.remove('show');
+}
+document.addEventListener('click', function(event) {
+  if (!popUp.contains(event.target)) {
+      hidePopUp();
+  }
+});
 let img = document.getElementById('bestImg')
 let boxp1 = document.getElementById('boxp1')
 let boxp2 = document.getElementById('boxp2')
@@ -65,9 +77,10 @@ $("#form").submit(function(e){
   var email = document.getElementById('email').value;
   var fname = document.getElementById('fname').value;
   var lname = document.getElementById('lname').value;
+  
   if(email.length<=0){
     document.querySelector('.errorName').innerHTML="E-mail is required";
-    
+
   }
   else{
     document.querySelector('.errorName').innerHTML="";
@@ -87,26 +100,36 @@ $("#form").submit(function(e){
             }
           else{
               document.querySelector('.errorName').innerHTML="";
-              $.ajax({
-                type: "POST",
-                url: "https://getform.io/f/anlelqoa",
-                crossDomain: true,
-                data: new FormData(this),
-                dataType: "json",
-                processData: false,
-                contentType: false,
-                headers: {
-                "Accept": "application/json"
-                }
-              }).done(function() {
-                alert('The form was submitted successfully.')
-                document.getElementById('email').value = "";
-                document.getElementById('fname').value = "";
-                document.getElementById('lname').value = "";  
-              }).fail(function() {
-                alert('An error occurred! Please try again later.')
-              });
+              if (document.getElementById('myCheckbox').checked == true) { 
+                document.querySelector('.errorName').innerHTML="";
+                $.ajax({
+                  type: "POST",
+                  url: "https://getform.io/f/anlelqoa",
+                  crossDomain: true,
+                  data: new FormData(this),
+                  dataType: "json",
+                  processData: false,
+                  contentType: false,
+                  headers: {
+                  "Accept": "application/json"
+                  }
+                }).done(function() {
+                  alert('The form was submitted successfully.')
+                  document.getElementById('email').value = "";
+                  document.getElementById('fname').value = "";
+                  document.getElementById('lname').value = "";  
+                }).fail(function() {
+                  alert('An error occurred! Please try again later.')
+                }); 
+              }
+              else{
+              document.querySelector('.errorName').innerHTML=" Checkbox is required";
+
+              }
+
+              
             }
+            
     }
     }
   }
@@ -125,6 +148,7 @@ var swiper = new Swiper(".imgContainer", {
     },
     mousewheel: true,
     keyboard: true,
+    
   });
 
     

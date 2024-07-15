@@ -517,6 +517,7 @@ footer img{
 }
 .swiper-pagination{
     bottom: auto !important;
+    width: auto !important;
     text-align: left;
     margin-left: 20%;
     margin-top: 10px;
@@ -531,7 +532,7 @@ footer img{
     opacity: 1;
   }
 .swiper-pagination-bullet-active {
-    background-image: url('/assets/img/1.svg');
+    background-image: url('./assets/img/1.svg');
     width: 15px;
     height: 15px;
   }
